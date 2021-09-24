@@ -28,7 +28,6 @@ export interface TaskRepeatCfgCopy {
   friday: boolean;
   saturday: boolean;
   sunday: boolean;
-  isAddToBottom: boolean;
   tagIds: string[];
 }
 
@@ -58,6 +57,5 @@ export const DEFAULT_TASK_REPEAT_CFG: Omit<TaskRepeatCfgCopy, 'id'> = {
   friday: true,
   saturday: false,
   sunday: false,
-  isAddToBottom: false,
   tagIds: [],
 };

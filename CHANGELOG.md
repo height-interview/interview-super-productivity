@@ -1,3 +1,18 @@
+# [7.6.0](https://github.com/johannesjo/super-productivity/compare/v7.6.0-rc.1...v7.6.0) (2021-09-24)
+
+### Bug Fixes
+
+- invalid clock string error [#1526](https://github.com/johannesjo/super-productivity/issues/1526) ([1bf8b56](https://github.com/johannesjo/super-productivity/commit/1bf8b5649efb318519159024f84ca8db84290d6a))
+- invalid clock string error for legacy data [#1526](https://github.com/johannesjo/super-productivity/issues/1526) ([440e0b2](https://github.com/johannesjo/super-productivity/commit/440e0b2b407b945b6c3c29875c24397d4edde568))
+- **taskRepeat:** task repeat model not saved after after project delete cleanup [#1530](https://github.com/johannesjo/super-productivity/issues/1530) ([659bd52](https://github.com/johannesjo/super-productivity/commit/659bd52389a39ffa71aa2d9009fe087575d60842))
+
+### Features
+
+- **autoRepair:** fix case when project was deleted that is found in taskRepeatCfg [#1530](https://github.com/johannesjo/super-productivity/issues/1530) ([a86fda5](https://github.com/johannesjo/super-productivity/commit/a86fda56dd809a2be87131b8d078209665cae3ef))
+- hide time estimate exceeded banner when other task was selected ([5342c8f](https://github.com/johannesjo/super-productivity/commit/5342c8ffa49bdf211627f5b2e3354599adb0bfa8))
+- **idle:** reactivate simple counter button if it was activated before ([7f68079](https://github.com/johannesjo/super-productivity/commit/7f6807904da29957dcdce3fe99b9d64ecfc216cd))
+- **sync:** always show button [#1213](https://github.com/johannesjo/super-productivity/issues/1213) ([474abd3](https://github.com/johannesjo/super-productivity/commit/474abd37f1809487648a8390f10cbc213b7b2765))
+
 # [7.6.0-rc.1](https://github.com/johannesjo/super-productivity/compare/v7.6.0-rc.0...v7.6.0-rc.1) (2021-09-22)
 
 ### Bug Fixes
@@ -15,7 +30,6 @@
 ### Bug Fixes
 
 - contextmenu for ios (?) [#1467](https://github.com/johannesjo/super-productivity/issues/1467) ([f8b11af](https://github.com/johannesjo/super-productivity/commit/f8b11af39bd1ec1e85cd7c915ee124ef8b2cf55c))
-- empty task description not being saved [#1491](https://github.com/johannesjo/super-productivity/issues/1491) ([14c962e](https://github.com/johannesjo/super-productivity/commit/14c962e4c576ac1695dead08014fa704ddd4b6f9))
 - **firefox:** scrollbars ([1d5d158](https://github.com/johannesjo/super-productivity/commit/1d5d1580bec3658b8318dae980f29b78d7a1f5fe))
 - **gitHub:** changes to issue itself not recognized ([b667c9b](https://github.com/johannesjo/super-productivity/commit/b667c9b9c648b07fa8e60ebd2772a65eb84fbf80))
 - **gitLab:** wrong issue url ([3c0de01](https://github.com/johannesjo/super-productivity/commit/3c0de01963dbe944f5831207f31be6d3188c9883))
@@ -155,11 +169,8 @@
 
 ### Features
 
-- [#1221](https://github.com/johannesjo/super-productivity/issues/1221) remove isAddToBottom defaults ([5a67475](https://github.com/johannesjo/super-productivity/commit/5a674751d66439510b78a0df7eeca8ac65387eb6))
-- [#1221](https://github.com/johannesjo/super-productivity/issues/1221) reverse isAddToBottom in project ([9c67831](https://github.com/johannesjo/super-productivity/commit/9c678312445f6ecac710f2b8a9d006358b37975c))
 - [#1221](https://github.com/johannesjo/super-productivity/issues/1221) setup for add after currentTaskId ([55a4b2e](https://github.com/johannesjo/super-productivity/commit/55a4b2e19d35fd21de5eab895e91a7be9ccfa2ca))
 - [#1221](https://github.com/johannesjo/super-productivity/issues/1221) top icon instead of inline ([fbef9ca](https://github.com/johannesjo/super-productivity/commit/fbef9cab2ca6a5aa4dca6670d15f44aa0c4b9a65))
-- [#1221](https://github.com/johannesjo/super-productivity/issues/1221) WIP toggle button for isAddToBottom ([5e28833](https://github.com/johannesjo/super-productivity/commit/5e28833f21920ef509c68f3ee27fa512c4304202))
 - add more no sync fields ([862c159](https://github.com/johannesjo/super-productivity/commit/862c159f3973e650ce26054700f545537cbfd1cb))
 - **android:** add more initial logging info ([dedb3ca](https://github.com/johannesjo/super-productivity/commit/dedb3caa756ac0e54b4311e8575dff2cbdb07083))
 - closes [#1221](https://github.com/johannesjo/super-productivity/issues/1221) finishing comments ([2845eac](https://github.com/johannesjo/super-productivity/commit/2845eacbd26174fa9ed51db67544820fcf61691c))

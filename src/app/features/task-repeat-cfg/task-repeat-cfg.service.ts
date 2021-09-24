@@ -207,7 +207,7 @@ export class TaskRepeatCfgService {
         }),
       );
 
-    const { task, isAddToBottom } = this._getTaskRepeatTemplate(taskRepeatCfg);
+    const { task } = this._getTaskRepeatTemplate(taskRepeatCfg);
 
     const createNewActions: (
       | ReturnType<typeof addTask>
@@ -220,7 +220,6 @@ export class TaskRepeatCfgService {
           .activeWorkContextType as WorkContextType,
         workContextId: this._workContextService.activeWorkContextId as string,
         isAddToBacklog: false,
-        isAddToBottom,
       }),
       updateTaskRepeatCfg({
         taskRepeatCfg: {
@@ -254,7 +253,6 @@ export class TaskRepeatCfgService {
 
   private _getTaskRepeatTemplate(taskRepeatCfg: TaskRepeatCfg): {
     task: Task;
-    isAddToBottom: boolean;
   } {
     const isAddToTodayAsFallback =
       !taskRepeatCfg.projectId && !taskRepeatCfg.tagIds.length;
@@ -268,7 +266,6 @@ export class TaskRepeatCfgService {
           tagIds: isAddToTodayAsFallback ? [TODAY_TAG.id] : taskRepeatCfg.tagIds || [],
         },
       }),
-      isAddToBottom: taskRepeatCfg.isAddToBottom || false,
     };
   }
 }

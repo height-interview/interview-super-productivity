@@ -277,13 +277,11 @@ export const tagReducer = createReducer<TagState>(
 
   // TASK STUFF
   // ---------
-  on(addTask, (state, { task, isAddToBottom }) => {
+  on(addTask, (state, { task }) => {
     const updates: Update<Tag>[] = task.tagIds.map((tagId) => ({
       id: tagId,
       changes: {
-        taskIds: isAddToBottom // create an ordered list with the new task id in the correct position
-          ? [...(state.entities[tagId] as Tag).taskIds, task.id]
-          : [task.id, ...(state.entities[tagId] as Tag).taskIds],
+        taskIds: [task.id, ...(state.entities[tagId] as Tag).taskIds], // create an ordered list with the new task id in the correct position
       },
     }));
     return tagAdapter.updateMany(updates, state);

@@ -910,7 +910,6 @@ describe('createBlockerBlocks()', () => {
 
           projectId: null,
           remindAt: TaskReminderOptionId.AtStart,
-          isAddToBottom: true,
           tagIds: [],
         },
       ];
@@ -939,7 +938,6 @@ describe('createBlockerBlocks()', () => {
           friday: false,
           saturday: false,
           sunday: true,
-          isAddToBottom: true,
           tagIds: [],
         },
         {
@@ -957,7 +955,6 @@ describe('createBlockerBlocks()', () => {
           friday: true,
           saturday: true,
           sunday: true,
-          isAddToBottom: true,
           tagIds: [],
         },
         {
@@ -975,7 +972,6 @@ describe('createBlockerBlocks()', () => {
           friday: true,
           saturday: true,
           sunday: true,
-          isAddToBottom: true,
           tagIds: [],
         },
       ];

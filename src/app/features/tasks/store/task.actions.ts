@@ -69,7 +69,6 @@ export const addTask = createAction(
     workContextId: string;
     workContextType: WorkContextType;
     isAddToBacklog: boolean;
-    isAddToBottom: boolean;
   }>(),
 );
 

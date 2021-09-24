@@ -54,7 +54,6 @@ import { SS_TODO_TMP } from '../../../core/persistence/ls-keys.const';
 export class AddTaskBarComponent implements AfterViewInit, OnDestroy {
   @Input() isAddToBacklog: boolean = false;
   @Input() tabindex: number = 0;
-  @Input() isAddToBottom: boolean = false;
   @Input() isDoubleEnterMode: boolean = false;
   @Input() isElevated: boolean = false;
   @Input() isDisableAutoFocus: boolean = false;
@@ -178,10 +177,6 @@ export class AddTaskBarComponent implements AfterViewInit, OnDestroy {
             this.isAddToBacklog = !this.isAddToBacklog;
             this._cd.detectChanges();
             ev.preventDefault();
-          } else if (ev.key === '2' && ev.ctrlKey) {
-            this.isAddToBottom = !this.isAddToBottom;
-            this._cd.detectChanges();
-            ev.preventDefault();
           }
         },
       );
@@ -285,7 +280,6 @@ export class AddTaskBarComponent implements AfterViewInit, OnDestroy {
           newTaskStr,
           this.isAddToBacklog,
           {},
-          this.isAddToBottom,
         );
       } else if (this.doubleEnterCount > 0) {
         this.blurred.emit();
