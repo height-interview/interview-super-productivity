@@ -1118,6 +1118,7 @@ describe('mapToViewEntries()', () => {
 
             projectId: null,
             remindAt: TaskReminderOptionId.AtStart,
+            isAddToBottom: true,
             tagIds: [],
           },
         ],

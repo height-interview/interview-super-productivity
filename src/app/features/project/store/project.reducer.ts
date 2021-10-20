@@ -453,7 +453,7 @@ export const projectReducer = createReducer<ProjectState>(
 
   // Task Actions
   // ------------
-  on(addTask, (state, { task, isAddToBacklog }) => {
+  on(addTask, (state, { task, isAddToBottom, isAddToBacklog }) => {
     const affectedProject = task.projectId && state.entities[task.projectId];
     if (!affectedProject) return state; // if there is no projectId, no changes are needed
 
@@ -462,8 +462,18 @@ export const projectReducer = createReducer<ProjectState>(
       : 'taskIds';
 
     const changes: { [x: string]: any[] } = {};
-    changes[prop] = [task.id, ...affectedProject[prop]];
-
+    if (isAddToBottom) {
+      changes[prop] = [...affectedProject[prop], task.id];
+    } else {
+      // TODO #1382 get the currentTaskId from a different part of the state tree or via payload or _taskService
+      // const currentTaskId = payload.currentTaskId || this._taskService.currentTaskId
+      // const isAfterRunningTask = prop==='taskIds' && currentTaskId
+      // console.log('isAfterRunningTask?',isAfterRunningTask,'currentTaskId',currentTaskId);
+      // if (isAfterRunningTask) add the new task in the list after currentTaskId
+      // else { // add to the top
+      changes[prop] = [task.id, ...affectedProject[prop]];
+      //}
+    }
     return projectAdapter.updateOne(
       {
         id: task.projectId as string,

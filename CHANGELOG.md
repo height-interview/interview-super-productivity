@@ -169,8 +169,11 @@
 
 ### Features
 
+- [#1221](https://github.com/johannesjo/super-productivity/issues/1221) remove isAddToBottom defaults ([5a67475](https://github.com/johannesjo/super-productivity/commit/5a674751d66439510b78a0df7eeca8ac65387eb6))
+- [#1221](https://github.com/johannesjo/super-productivity/issues/1221) reverse isAddToBottom in project ([9c67831](https://github.com/johannesjo/super-productivity/commit/9c678312445f6ecac710f2b8a9d006358b37975c))
 - [#1221](https://github.com/johannesjo/super-productivity/issues/1221) setup for add after currentTaskId ([55a4b2e](https://github.com/johannesjo/super-productivity/commit/55a4b2e19d35fd21de5eab895e91a7be9ccfa2ca))
 - [#1221](https://github.com/johannesjo/super-productivity/issues/1221) top icon instead of inline ([fbef9ca](https://github.com/johannesjo/super-productivity/commit/fbef9cab2ca6a5aa4dca6670d15f44aa0c4b9a65))
+- [#1221](https://github.com/johannesjo/super-productivity/issues/1221) WIP toggle button for isAddToBottom ([5e28833](https://github.com/johannesjo/super-productivity/commit/5e28833f21920ef509c68f3ee27fa512c4304202))
 - add more no sync fields ([862c159](https://github.com/johannesjo/super-productivity/commit/862c159f3973e650ce26054700f545537cbfd1cb))
 - **android:** add more initial logging info ([dedb3ca](https://github.com/johannesjo/super-productivity/commit/dedb3caa756ac0e54b4311e8575dff2cbdb07083))
 - closes [#1221](https://github.com/johannesjo/super-productivity/issues/1221) finishing comments ([2845eac](https://github.com/johannesjo/super-productivity/commit/2845eacbd26174fa9ed51db67544820fcf61691c))

@@ -242,6 +242,7 @@ export class TaskService {
     title: string | null,
     isAddToBacklog: boolean = false,
     additional: Partial<Task> = {},
+    isAddToBottom: boolean = false,
   ): string {
     const workContextId = this._workContextService.activeWorkContextId as string;
     const workContextType = this._workContextService
@@ -259,6 +260,7 @@ export class TaskService {
         workContextId,
         workContextType,
         isAddToBacklog,
+        isAddToBottom,
       }),
     );
     return task && task.id;
