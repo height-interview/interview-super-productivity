@@ -3,11 +3,18 @@
 ## Install
 
 ```
-cd super-productivity
-npm i -g @angular/cli
-npm i
+# Make sure to use node@16
+brew install node@16
+# or
+npm install -g n
+n 16
 
-## Run the server
+# Install super-productivity
+cd super-productivity
+npm install -g @angular/cli
+npm install
+
+# Run the server
 ng serve
 open "http://localhost:4200"
 
